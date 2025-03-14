@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const Listing = require('./models/listing.js')
 const ejs = require('ejs')
 
-const MONGO_URL = 'mongodb://localhost:27017/test'
+const MONGO_URL = 'mongodb://localhost:27017/airbnb-clone'
 
 main()
 .then(() => { 
@@ -34,6 +34,6 @@ app.get('/testListings', async (req, res) => {
   res.send('Success!');
 });
 
-app.listen(3000, () => {
+app.listen(6969, () => {
   console.log(`Example app listening on port 8080`)
 });
