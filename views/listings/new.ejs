@@ -9,23 +9,23 @@
     <h3>Create a New Listing</h3>
     <form method="POST" action="/listings">
         <label for="title">Title</label>
-        <input name="title" placeholder="Enter Title" type="text">
-        <br>
+        <input name="listing[title]" placeholder="Enter Title" type="text">
+        <br><br>
         <label for="description">Description</label>
-        <textarea name="description" placeholder="Enter Description" type="text"></textarea>
-        <br>
+        <textarea name="listing[description]" placeholder="Enter Description" type="text"></textarea>
+        <br><br>
         <label for="image">Image</label>
-        <input name="image" placeholder="Enter Image URL / Link" type="text">
-        <br>
+        <input name="listing[image]" placeholder="Enter Image URL / Link" type="text">
+        <br><br>
         <label for="price">Price</label>
-        <input name="price" placeholder="Enter Price" type="number">
-        <br>
+        <input name="listing[price]" placeholder="Enter Price" type="number">
+        <br><br>
         <label for="location">Location</label>
-        <input name="location" placeholder="Enter Address Location" type="text">
-        <br>
+        <input name="listing[location]" placeholder="Enter Address Location" type="text">
+        <br><br>
         <label for="country">Country</label>
-        <input name="country" placeholder="Enter Country Name" type="text">
-        <br>
+        <input name="listing[country]" placeholder="Enter Country Name" type="text">
+        <br><br>
         <button type="submit">Add</button>
     </form>
 </body>
