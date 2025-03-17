@@ -1,3 +1,110 @@
-body {
-    background-color: palegreen;
+/* body {
+  background-color: palegreen;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.nav-logo img {
+  height: 60px; /* Adjust as needed */
+  margin: 0px 20px;
+}
+
+.nav-link-tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  height: 40px;
+  width: fit-content;
+  padding: 13px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  background-color: #f1f1f1;
+}
+
+.nav-explore {
+  height: 40px;
+  width: fit-content;
+  padding: 13px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav-explore {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+.create-new {
+  height: 40px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.create-new:hover {
+  background-color: #f1f1f1;
+}
+
+.filter {
+  height: 40px;
+  width: 40px;
+  padding: 13px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.filter:hover {
+  background-color: #f1f1f1;
+}
+.nav-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+/* End of Navbar */
