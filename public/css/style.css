@@ -1,7 +1,7 @@
 /* body {
   background-color: palegreen;
 } */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,10 +9,11 @@
 
 /* Navbar */
 .navbar {
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  background-color: #ffffff;
   border-bottom: 2px solid #f1f1f1;
 }
 
@@ -108,3 +109,117 @@
   margin-right: 20px;
 }
 /* End of Navbar */
+
+/* Footer */
+
+.footer {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-top: 2px solid #f1f1f1;
+}
+
+.f-info-l {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.f-name {
+  height: 60px;
+  width: fit-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.f-name p {
+  position: relative;
+  top: 8px;
+}
+
+.f-info-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.f-info-links i{
+  font-size: 2px;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.f-info-r {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.f-filter {
+  height: 60px;
+  width: fit-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+}
+
+.f-globe {
+  height: 60px;
+  width: fit-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.f-currency {
+  height: 60px;
+  width: fit-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.f-info-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.f-info-socials a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+/* End of footer */
