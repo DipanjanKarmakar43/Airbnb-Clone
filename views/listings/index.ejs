@@ -5,10 +5,34 @@
   <!-- <form method="GET" action="/listings/new">
     <button>Create New</button>
   </form> -->
+
+  <div class="row">
+    <% for (let listing of allListings) { %>
+    <a href="/listings/<%= listing._id %>">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= listing.image %>" alt="listed image" />
+        </div>
+        <div class="card-content">
+          <div class="card-content-address">
+            <h4><%= listing.location %></h4>
+            ,&nbsp;
+            <h4><%= listing.country %></h4>
+          </div>
+          <p><%= listing.title %></p>
+          <!-- <p><%= listing.description %></p> -->
+          <h5>&#8377; <%= listing.price.toLocaleString("en-IN") %> / night</h5>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <!-- 
   <ul>
     <% for (let listing of allListings) { %>
     <li><a href="/listings/<%= listing._id %>"> <%= listing.title %> </a></li>
     <li><a href="/listings/<%= listing._id %>"> <%= listing.title %> </a></li>
     <% } %>
-  </ul>
+  </ul> -->
 </body>
