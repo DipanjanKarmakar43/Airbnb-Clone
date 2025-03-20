@@ -1,18 +1,47 @@
 <% layout("/layouts/boilerplate") %>
 
 <body>
-  <h3>Listing Details :</h3>
-  <ul>
-    <li><%= listing.title %></li>
-    <li><%= listing.description %></li>
-    <li>&#8377; <%= listing.price.toLocaleString("en-IN") %></li>
-    <li><%= listing.location %></li>
-    <li><%= listing.country %></li>
-  </ul>
-  <br />
-  <a href="/listings/<%= listing._id %>/edit">Edit This Listing</a>
-  <br /><br />
-  <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
-    <button>Delete This Listing</button>
-  </form>
+  <div class="listing-container">
+    <div class="listing-container-left">
+      <div class="listing-image">
+        <img
+          src="<%= listing.image %>"
+          alt="Listing Image"
+          class="listing-img"
+        />
+        <div class="listing-overlay">
+          <h1 class="listing-title"><%= listing.title %></h1>
+        </div>
+      </div>
+    </div>
+    <div class="listing-container-right">
+      <div class="listing-container-top">
+        <h1 class="listing-price">
+          <i class="fa-solid fa-wallet"></i>
+          &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+        </h1>
+        <h2 class="listing-location">
+          <i class="fa-solid fa-map-location"></i>
+          <%= listing.location %>, <%= listing.country %>
+        </h2>
+        <p class="listing-description"><%= listing.description %></p>
+      </div>
+      <div class="listing-container-bottom">
+        <a href="/listings/<%= listing._id %>/edit" class="btn-edit"
+          >Edit This Listing &nbsp;&nbsp;<i
+            class="fa-solid fa-pen-to-square"
+          ></i
+        ></a>
+        <form
+          method="POST"
+          action="/listings/<%= listing._id %>?_method=DELETE"
+          class="delete-form"
+        >
+          <button class="btn-delete">
+            Delete This Listing &nbsp;&nbsp;<i class="fa-solid fa-trash"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>

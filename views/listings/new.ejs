@@ -2,24 +2,18 @@
 
 <body>
   <div class="form">
-
     <div class="form-header">
       <i class="fa-solid fa-door-open"></i>
       <h1>Create a New Listing</h1>
     </div>
-
     <div class="form-body">
-
       <form class="form-container" method="POST" action="/listings">
-
         <div class="form-top">
-
           <div class="form-left">
-
             <div class="input">
               <label class="input_label" for="title">Title</label>
               <input
-                class="input_field"
+                class="input_field input__field-title"
                 name="listing[title]"
                 placeholder="Enter Title"
                 type="text"
@@ -28,18 +22,16 @@
             <div class="input">
               <label class="input_label" for="description">Description</label>
               <textarea
-                class="input_field input__field--textarea"
+                class="input_field input__field-description"
                 name="listing[description]"
                 placeholder="Enter Description"
               ></textarea>
             </div>
-
             <div class="form-address">
-
               <div class="input">
                 <label class="input_label" for="location">Location</label>
                 <input
-                  class="input_field"
+                  class="input_field input__field-location"
                   name="listing[location]"
                   placeholder="Enter Address Location"
                   type="text"
@@ -48,23 +40,19 @@
               <div class="input">
                 <label class="input_label" for="country">Country</label>
                 <input
-                  class="input_field"
+                  class="input_field input__field-country"
                   name="listing[country]"
                   placeholder="Enter Country Name"
                   type="text"
                 />
               </div>
-
             </div>
-
           </div>
-
           <div class="form-right">
-
             <div class="input">
               <label class="input_label" for="image">Image</label>
               <input
-                class="input_field"
+                class="input_field input__field-image"
                 name="listing[image]"
                 placeholder="Enter Image URL / Link"
                 type="text"
@@ -73,22 +61,20 @@
             <div class="input">
               <label class="input_label" for="price">Price</label>
               <input
-                class="input_field"
+                class="input_field input__field-price"
                 name="listing[price]"
                 placeholder="Enter Price"
                 type="number"
               />
             </div>
-
           </div>
-
         </div>
         <div class="form-botton">
-          <button class="button-addNeW" type="submit">Add</button>
+          <button class="button-addNeW" type="submit">
+            Add &nbsp;&nbsp;<i class="fa-solid fa-house-circle-check"></i>
+          </button>
         </div>
-
       </form>
-
     </div>
   </div>
 </body>

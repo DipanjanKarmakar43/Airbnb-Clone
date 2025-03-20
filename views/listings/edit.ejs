@@ -1,43 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Airbnb | Holiday rentals, cabins, beach houses & more</title>
-    <link rel="icon" type="image/jpg" href="airbnb-weblogo.jpg" />
-  </head>
-  <body>
-    <h3>Edit your Listing</h3>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
-      <label for="title">Title</label>
-      <input name="listing[title]" value="<%= listing.title %>" type="text" />
-      <br /><br />
-      <label for="description">Description</label>
-      <textarea name="listing[description]">
-<%= listing.description %></textarea
+<% layout("/layouts/boilerplate") %>
+
+<body>
+  <div class="form">
+    <div class="form-header">
+      <i class="fa-solid fa-door-open"></i>
+      <h1>Edit Your Listing</h1>
+    </div>
+    <div class="form-body">
+      <form
+        class="form-container"
+        method="POST"
+        action="/listings/<%= listing._id %>?_method=PUT"
       >
-      <br /><br />
-      <label for="image">Image</label>
-      <input name="listing[image]" value="<%= listing.image %>" type="text" />
-      <br /><br />
-      <label for="price">Price</label>
-      <input name="listing[price]" value="<%= listing.price %>" type="number" />
-      <br /><br />
-      <label for="location">Location</label>
-      <input
-        name="listing[location]"
-        value="<%= listing.location %>"
-        type="text"
-      />
-      <br /><br />
-      <label for="country">Country</label>
-      <input
-        name="listing[country]"
-        value="<%= listing.country %>"
-        type="text"
-      />
-      <br /><br />
-      <button type="submit">Edit</button>
-    </form>
-  </body>
-</html>
+        <div class="form-top">
+          <div class="form-left">
+            <div class="input">
+              <label class="input_label" for="title">Title</label>
+              <input
+                class="input_field input__field-title"
+                name="listing[title]"
+                value="<%= listing.title %>"
+                type="text"
+              />
+            </div>
+            <div class="input">
+              <label class="input_label" for="description">Description</label>
+              <textarea
+                class="input_field input__field-description"
+                name="listing[description]"
+              >
+<%= listing.description %></textarea
+              >
+            </div>
+            <div class="form-address">
+              <div class="input">
+                <label class="input_label" for="location">Location</label>
+                <input
+                  class="input_field input__field-location"
+                  name="listing[location]"
+                  value="<%= listing.location %>"
+                  type="text"
+                />
+              </div>
+              <div class="input">
+                <label class="input_label" for="country">Country</label>
+                <input
+                  class="input_field input__field-country"
+                  name="listing[country]"
+                  value="<%= listing.country %>"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-right">
+            <div class="input">
+              <label class="input_label" for="image">Image</label>
+              <input
+                class="input_field input__field-image"
+                name="listing[image]"
+                value="<%= listing.image %>"
+                type="text"
+              />
+            </div>
+            <div class="input">
+              <label class="input_label" for="price">Price</label>
+              <input
+                class="input_field input__field-price"
+                name="listing[price]"
+                value="<%= listing.price %>"
+                type="number"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-botton">
+          <button class="button-addNeW" type="submit">
+            Edit&nbsp;&nbsp;<i class="fa-solid fa-pen-to-square"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

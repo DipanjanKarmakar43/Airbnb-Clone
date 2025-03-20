@@ -91,5 +91,5 @@ app.delete("/listings/:id", async (req, res) => {
 // });
 
 app.listen(6969, () => {
-  console.log(`Example app listening on port 8080`);
+  console.log(`Example app listening on port 6969`);
 });
