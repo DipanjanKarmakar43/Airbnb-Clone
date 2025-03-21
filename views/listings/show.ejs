@@ -4,15 +4,19 @@
   <div class="listing-container">
     <div class="listing-container-left">
       <div class="listing-image">
+        <div class="listing-overlay top-overlay">
+          <h1 class="listing-title">Property Detail&nbsp;&nbsp;<i class="fa-solid fa-house"></i></h1>
+        </div>
         <img
           src="<%= listing.image %>"
           alt="Listing Image"
           class="listing-img"
         />
-        <div class="listing-overlay">
+        <div class="listing-overlay bottom-overlay">
           <h1 class="listing-title"><%= listing.title %></h1>
         </div>
       </div>
+      
     </div>
     <div class="listing-container-right">
       <div class="listing-container-top">
