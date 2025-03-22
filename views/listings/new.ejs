@@ -48,6 +48,8 @@
                   placeholder="Enter Country Name"
                   type="text"
                   required
+                  oninvalid="this.setCustomValidity('Please enter a country name!')"
+                  oninput="this.setCustomValidity('')"
                 />
               </div>
             </div>
